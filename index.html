@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Calendar App Vanilla JS</title>
+  </head>
+  <body>
+    
+   <div class="overlay">
+    <div id="container">
+      <div id="header">
+        <div id="monthDisplay">
+        </div>
+        <div>
+          <button id="backButton"><i class="fas fa-angle-left prev" id="left"></i></button>
+          <button id="nextButton"><i class="fas fa-angle-right next" id="right"></i></button>
+        </div>
+      </div>
+
+      <div id="weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+
+      <div id="calendar"></div>
+
+          <div class="slider-container">
+      
+
+        <div
+          class="slide"
+          style="
+            background-image: url('https://c2.staticflickr.com/2/1968/29890968267_6de650b2a1_z.jpg');
+          "
+        ></div>
+         
+      
+        <div
+          class="slide"
+          style="
+            background-image: url('https://images.pexels.com/photos/18733834/pexels-photo-18733834/free-photo-of-dirt-road-in-forest-in-autumn.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+          "
+        ></div>
+  
+        
+        <div
+          class="slide"
+          style="
+            background-image: url('https://plus.unsplash.com/premium_photo-1670596899123-c4c67735d77a?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+          "
+         ></div>
+
+        
+        <div
+        class="slide"
+        style="
+          background-image: url('https://cdn.pixabay.com/photo/2017/02/19/15/28/winter-2080070_1280.jpg');
+        "
+      ></div>
+
+      
+      <div
+        class="slide"
+        style="
+          background-image: url('https://www.farmersalmanac.com/wp-content/uploads/2022/07/Snow-scene-blue.jpg');
+        "
+      ></div>
+
+     
+      <div
+        class="slide"
+        style="
+          background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/5-tuscany-spring-rolling-hills-on-sunset-rural-landscape-green-stevanzz-photography.jpg');
+        "
+      ></div>
+
+      
+      <div
+        class="slide"
+        style="
+          background-image: url('https://cdn.pixabay.com/photo/2016/08/02/09/21/danxia-landform-1562852_1280.jpg');
+        "
+      ></div>
+
+      
+      <div
+        class="slide"
+        style="
+          background-image: url('https://cdn.pixabay.com/photo/2020/08/28/07/40/waterfall-5523833_1280.jpg');
+        "
+      ></div>
+
+      
+      <div
+        class="slide"
+        style="
+          background-image: url('https://cdn.pixabay.com/photo/2013/10/07/18/06/field-192179_1280.jpg');
+        "
+      ></div>
+
+      
+      <div
+        class="slide"
+        style="
+          background-image: url('https://cdn.pixabay.com/photo/2017/06/17/18/35/beach-2413081_1280.jpg');
+        "
+      ></div>
+        
+        <div
+          class="slide"
+          style="
+            background-image: url('https://images.pexels.com/photos/130879/pexels-photo-130879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+          "
+        ></div>
+         
+         <div
+         class="slide active"
+         style="
+           background-image: url('https://cdn.pixabay.com/photo/2013/11/28/10/03/river-219972_1280.jpg');
+         "
+       ></div> 
+        
+    </div> 
+  </div>
+
+
+    <div id="newEventModal">
+      <h2>Add Event</h2>
+
+      <input id="eventTitleInput" placeholder="Event Title" />
+
+      <button id="saveButton">Save</button>
+      <button id="cancelButton">Cancel</button>
+    </div>
+
+    <div id="deleteEventModal">
+      <h2>Event</h2>
+
+      <p id="eventText"></p>
+
+      <button id="deleteButton">Delete</button>
+      <button id="closeButton">Close</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
